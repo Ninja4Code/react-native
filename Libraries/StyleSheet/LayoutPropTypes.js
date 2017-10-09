@@ -342,7 +342,7 @@ var LayoutPropTypes = {
     'relative'
   ]),
 
-  /** `flexDirection` controls which directions children of a container go.
+  /** `flexDirection` controls which direction children of a container go.
    *  `row` goes left to right, `column` goes top to bottom, and you may
    *  be able to guess what the other two do. It works like `flex-direction`
    *  in CSS, except the default is `column`.
@@ -461,6 +461,13 @@ var LayoutPropTypes = {
    * flexGrow, flexShrink, and flexBasis work the same as in CSS.
    */
   flex: ReactPropTypes.number,
+   /** `flexGrow` determines how a flex item will grow to 
+   *  cover available space relative to others.  For example, if orientation
+   *  is changed from portrait to landscape, the available width would increase 
+   *  and items will be resized to fill up the space.  If a flexGrow value of 
+   *  2 is specified, it will take up twice of the available space as a 
+   *  flexGrow of 1.
+   */
   flexGrow: ReactPropTypes.number,
   flexShrink: ReactPropTypes.number,
   flexBasis: ReactPropTypes.oneOfType([
